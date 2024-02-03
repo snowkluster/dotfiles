@@ -139,7 +139,7 @@ alias nf='neofetch'
 alias tmux='tmux -u' # Render utf-8 characters
 # echo -ne "\e]0;Terminal\a" # edit termianl title bar using posix escape sequence
 alias btop='btop --utf-force'
-
+alias v='vim'
 alias bat='batcat'
 alias upgrade='sudo apt update && sudo apt upgrade'
 alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
