@@ -155,3 +155,5 @@ export LESS_TERMCAP_us=$'\e[1;4;32m'
 
 # colorful man pages using bat
 # export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+
+export BAT_THEME="tokyo-night"
