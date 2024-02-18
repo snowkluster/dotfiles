@@ -1,6 +1,7 @@
 set statusbar-h-padding 0
 set statusbar-v-padding 0 
 set page-padding 1
+set selection-clipboard clipboard
 
 # Tokyonight color theme for Zathura
 # Swaps Foreground for Background to get a light version if the user prefers
