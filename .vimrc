@@ -43,3 +43,4 @@ function! HasPaste()
   return ''
 endfunction
 
+set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
