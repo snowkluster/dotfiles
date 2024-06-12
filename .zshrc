@@ -50,6 +50,8 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 HISTSIZE=6000
 HISTFILE=~/.zsh_history
