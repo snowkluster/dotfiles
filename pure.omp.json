@@ -59,6 +59,21 @@
       "type": "prompt"
     },
     {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#81A1C1", // Color for Python virtual environment
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": " {{ .Venv }} ",
+          "type": "python" // Type for Python virtual environment
+        }
+      ],
+      "type": "prompt"
+    },
+    {
       "alignment": "left",
       "newline": true,
       "segments": [
