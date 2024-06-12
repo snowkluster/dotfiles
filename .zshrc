@@ -1,7 +1,8 @@
-# Created by newuser for 5.8.1
+# Created by anon for 5.8.1
 
 alias ll="eza -al --group-directories-first"
 alias ls="eza -G --color=always --sort=size"
+alias la="eza -a --color=always"
 
 # fnm
 export PATH="/home/anon/.local/share/fnm:$PATH"
@@ -47,6 +48,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/pure.omp.json/)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+fpath=(~/.zsh/zsh-completions/src/ $fpath)
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -69,3 +71,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 eval "$(fzf --zsh)"
+eval "$(pip completion -z)"
