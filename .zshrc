@@ -50,6 +50,8 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 fpath=(~/.zsh/zsh-completions/src/ $fpath)
 
+autoload -U compinit && compinit
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey "^[[1;5D" backward-word
