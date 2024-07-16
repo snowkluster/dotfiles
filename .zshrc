@@ -73,4 +73,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 eval "$(fzf --zsh)"
-eval "$(pip completion -z)"
+# eval "$(pip completion -z)"
+
+
+# Personal Functions
+# This is a quick a dirty answer, still has flaw with command failure and parent directories
+
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
