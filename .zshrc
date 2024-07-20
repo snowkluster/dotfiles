@@ -48,6 +48,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/pure.omp.json/)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /etc/zsh_command_not_found
 fpath=(~/.zsh/zsh-completions/src/ $fpath)
 
 autoload -U compinit && compinit
