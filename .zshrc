@@ -30,6 +30,7 @@ alias v='vim'
 alias bat='batcat'
 alias upgrade='sudo apt update && sudo apt upgrade'
 alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
+alias lg='lazygit'
 
 # colorful man pages stdin less format
 export LESS_TERMCAP_mb=$'\e[1;31m'
@@ -53,8 +54,9 @@ fpath=(~/.zsh/zsh-completions/src/ $fpath)
 
 autoload -U compinit && compinit
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# Can use `showkey -a` or `cat -v` to get escape sequence for keys
+bindkey '^[[1;5A' history-substring-search-up # CTRL + Up Arrow 
+bindkey '^[[1;5B' history-substring-search-down # CTRL + Down Arrow
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
