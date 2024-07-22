@@ -3,6 +3,7 @@
 alias ll="eza -al --group-directories-first"
 alias ls="eza -G --color=always --sort=size"
 alias la="eza -a --color=always"
+alias l="eza -xa --color=always --sort=size"
 
 # fnm
 export PATH="/home/anon/.local/share/fnm:$PATH"
