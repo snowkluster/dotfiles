@@ -1,0 +1,26 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"font_face": "JetBrains Mono",
+	"font_size": 13,
+	"index_files": true,
+	"ui_scale": 1.1,
+	"show_full_path": false,
+	"show_panel_on_build": true,
+	"caret_extra_top": 0.8,
+	"caret_extra_bottom": 0.8,
+	"caret_extra_width": 1,
+	"draw_white_space": "all",
+	"file_tab_style": "rounded",
+	"save_on_focus_lost": true,
+	"enable_tab_scrolling": false,
+	"hide_new_tab_button": true,
+	"scroll_past_end": 0.4,
+	"hot_exit": false,
+	"remember_open_files": true,
+	"show_sidebar_button": false,
+}
