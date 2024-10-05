@@ -6,8 +6,15 @@ config.window_background_opacity = 0.87
 
 config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
-config.initial_rows = 24
-config.initial_cols = 95
+config.initial_rows = 25
+config.initial_cols = 96
+
+config.window_padding = {
+  left = 1,
+  right = 1,
+  top = 1,
+  bottom = 1,
+}
 
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
