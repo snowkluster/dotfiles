@@ -36,6 +36,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
+# change xterm-color to xterm-kitty to get colour support in kitty
 case "$TERM" in
     xterm-color|*-256color|xterm-color) color_prompt=yes;;
 esac
@@ -133,9 +134,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias nv='nvim'
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 alias web='python3 -m http.server'
-alias nf='neofetch'
+alias nf='fastfetch' # neofetch is over
 alias tmux='tmux -u' # Render utf-8 characters
 # echo -ne "\e]0;Terminal\a" # edit termianl title bar using posix escape sequence
 alias btop='btop --utf-force'
