@@ -1,5 +1,15 @@
 # Created by snowkluster for 5.8.1
 
+# https://git-scm.com/book/sv/v2/Bilaga-A:-Git-in-Other-Environments-Git-in-Zsh
+# https://medium.com/pareture/simplest-zsh-prompt-configs-for-git-branch-name-3d01602a6f33
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:git*' formats " %F{#c4a000}(%B%b)%f "
+precmd() {
+    vcs_info # precmd run before rendering the cmd unto the screen
+}
+setopt prompt_subst
+
 alias ll="eza -al --group-directories-first"
 alias ls="eza -G --color=always --sort=size"
 alias la="eza -a --color=always"
