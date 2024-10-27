@@ -31,3 +31,4 @@ export PATH="$PATH:/home/anon/.local/bin"
 . "$HOME/.cargo/env"
 
 export PATH=$PATH:/usr/local/go/bin
+export GROFF_NO_SGR=1
