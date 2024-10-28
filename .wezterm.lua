@@ -67,4 +67,12 @@ config.colors = {
   },
 }
 
+config.keys = {
+  {
+    key = 'n',
+    mods = 'SHIFT|CTRL',
+    action = wezterm.action.ToggleFullScreen,
+  },
+}
+
 return config
