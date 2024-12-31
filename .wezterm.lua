@@ -7,7 +7,7 @@ config.window_background_opacity = 0.87
 config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
 config.initial_rows = 25
-config.initial_cols = 96
+config.initial_cols = 102
 
 config.window_padding = {
   left = 1,
@@ -22,7 +22,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = 'MaterialDarker'
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
-config.cursor_blink_rate = 450
+config.cursor_blink_rate = 470
 
 config.default_cursor_style = 'BlinkingBar'
 config.colors = {
@@ -72,6 +72,16 @@ config.keys = {
     key = 'n',
     mods = 'SHIFT|CTRL',
     action = wezterm.action.ToggleFullScreen,
+  },
+	{
+		key = '"',
+		mods = 'SHIFT|CTRL',
+		action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+	},
+	{
+    key = ':',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
 }
 

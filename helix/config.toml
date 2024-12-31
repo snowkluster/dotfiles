@@ -1,0 +1,8 @@
+theme = "base16_transparent"
+
+[editor]
+line-number = "absolute"
+auto-completion = true
+auto-format = true
+auto-info = true
+
