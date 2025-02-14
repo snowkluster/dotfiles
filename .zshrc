@@ -2,13 +2,22 @@
 
 # https://git-scm.com/book/sv/v2/Bilaga-A:-Git-in-Other-Environments-Git-in-Zsh
 # https://medium.com/pareture/simplest-zsh-prompt-configs-for-git-branch-name-3d01602a6f33
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git*' formats " %F{#c4a000}(%B%b)%f "
-precmd() {
-    vcs_info # precmd run before rendering the cmd unto the screen
-}
-setopt prompt_subst
+# autoload -Uz vcs_info
+# zstyle ':vcs_info:*' enable git svn
+# zstyle ':vcs_info:git*' formats " %F{#c4a000}(%B%b)%f "
+# precmd() {
+#     vcs_info # precmd run before rendering the cmd unto the screen
+# }
+# setopt prompt_subst
+
+# Setting up ZSH help page for shell builtin's
+# ALT + h is the shortcut for this
+autoload -Uz run-help
+(( ${+aliases[run-help]} )) && unalias run-help
+alias help=run-help
+
+autoload -Uz run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo run-help-svk run-help-svn
+
 
 alias ll="eza -al --group-directories-first"
 alias ls="eza -G --color=always --sort=size"
@@ -20,12 +29,12 @@ alias composer="composer.phar"
 export PATH="/home/anon/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
-
 # Created by `pipx` on 2023-12-11 18:57:05
 export PATH="$PATH:/home/anon/.local/bin"
 . "$HOME/.cargo/env"
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/go/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -59,7 +68,6 @@ export LESS_TERMCAP_us=$'\e[1;4;32m'
 # colorful man pages using bat
 # export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
-export BAT_THEME="tokyo-night"
 eval "$(oh-my-posh init zsh --config ~/.config/pure.omp.json/)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -96,3 +104,8 @@ mkcd () {
   mkdir "$1"
   cd "$1"
 }
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/anon/.pulumi/bin
+. "/home/anon/.deno/env"
+# export HOMEBREW_NO_ENV_HINTS
