@@ -1,8 +1,8 @@
 local wezterm = require 'wezterm'
-
 local config = wezterm.config_builder()
+local act = wezterm.action
 
-config.window_background_opacity = 0.87
+config.window_background_opacity = 0.92
 
 config.font = wezterm.font 'Iosevka Nerd Font'
 config.font_size = 15.0
@@ -24,7 +24,7 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_rate = 470
 
-config.default_cursor_style = 'BlinkingBar'
+config.default_cursor_style = 'BlinkingBlock' --[[ BlinkingBar ]]
 config.colors = {
   foreground = '#eaeaea',
   background = '#1b1b1b',
@@ -71,18 +71,23 @@ config.keys = {
   {
     key = 'n',
     mods = 'SHIFT|CTRL',
-    action = wezterm.action.ToggleFullScreen,
+    action = act.ToggleFullScreen,
   },
 	{
 		key = '"',
 		mods = 'SHIFT|CTRL',
-		action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+		action = act.SplitVertical { domain = 'CurrentPaneDomain' },
 	},
 	{
     key = ':',
     mods = 'CTRL|SHIFT',
-    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
+	{
+		key = "v",
+		mods = 'CTRL',
+		action = act.ActivateCopyMode,
+	},
 }
 
 return config
